@@ -1,4 +1,10 @@
 terraform {
+  backend "azurerm" {
+    resource_group_name = "NetworkWatcherRG"
+    storage_account_name = "711incidentandres"
+    container_name = "711-75884-tfstate"
+    key = "terraform.tfstate"
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
@@ -6,6 +12,7 @@ terraform {
     }
   }
 }
+
 
 
 provider "azurerm" {

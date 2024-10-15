@@ -10,7 +10,7 @@ variable "MONGO_DB"{
     type=string
 }
 
-variable "MAIL_SECRET_KEY"{
+variable "MAILER_ACCESS_TOKEN"{
     type=string
 }
 
@@ -18,11 +18,11 @@ variable "MAPBOX_ACCESS_TOKEN"{
     type=string
 }
 
-variable "MAIL_SERVICE"{
+variable "MAILER_SERVICE"{
     type=string
 }
 
-variable "MAIL_USER"{
+variable "MAILER_EMAIL"{
     type=string
 }
 

@@ -32,7 +32,7 @@ env:
 
 jobs:
     terraform-plan-apply:
-        runs on: ubuntu-latest
+        runs-on: ubuntu-latest
         env: 
             ARM_SKIP_PROVIDER_REGISTRATION: true
         steps:
@@ -52,6 +52,7 @@ jobs:
                 echo "${{ secrets.SSH_PUBLIC_KEY }" ./env/dev/keys/711incident_server.pub
                 chmod 777 ./env/dev/keys/711incident_server
                 chmod 777 ./env/dev/keys/711incident_server.pub
+                |
 
             - name: Terraform init
               run: terraform -chdir=env/dev init

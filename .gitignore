@@ -7,7 +7,7 @@
 # Local .terraform directories
 **/.terraform/*
 legacy/
-**/keys/** */
+**/keys/**
 # .tfstate files
 *.tfstate
 *.tfstate.*

@@ -96,7 +96,7 @@ resource "azurerm_linux_virtual_machine" "IN_VM" {
   size                  = "Standard_B2s"
   admin_username        = "${var.admin_username}"
   network_interface_ids = [azurerm_network_interface.IN_NIC.id]
-  custom_data           = filebase64("${path.path.module}./scripts/docker-install.tpl")
+  custom_data           = filebase64("${path.module}./scripts/docker-install.tpl")
 
   os_disk {
     caching              = "ReadWrite"
